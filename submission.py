@@ -1,10 +1,8 @@
 #!/usr/bin/env python3
 """ Contains all code to be written for submission. """
 
+# Do not change this.
 global_string = 'This is an example of a global string.'
-global_variable_string = (
-    f'With f-string formatting: {global_string}'
-)
 
 
 def reverse_str(s):
@@ -79,7 +77,7 @@ def avg_list(int_list):
     raise NotImplementedError("Delete this once implemented.")
 
 
-def onehot_encoding(num, num_classes=10):
+def one_hot_encoding(num, num_classes=10):
     """Return a list corresponding to the one-hot encoding of `num` for `num_classes` classes.
 
     Args:
@@ -92,11 +90,11 @@ def onehot_encoding(num, num_classes=10):
         `num` should be less than `num_classes`. If it is not, any output can be returned.
 
     Example:
-    >>> onehot_encoding(4)
+    >>> one_hot_encoding(4)
     [0, 0, 0, 0, 1, 0, 0, 0, 0, 0]
-    >>> onehot_encoding(3, num_classes=4)
+    >>> one_hot_encoding(3, num_classes=4)
     [0, 0, 0, 1]
-    >>> onehot_encoding(3, 4)
+    >>> one_hot_encoding(3, 4)
     [0, 0, 0, 1]
     """
     raise NotImplementedError("Delete this once implemented.")
@@ -106,7 +104,7 @@ def iterative_fibonacci(n):
     """Return the `n`-th Fibonacci number using iteration. There should be no recursive calls.
 
     Args:
-        n (int): the index in the Fibonacci sequence to retur
+        n (int): the index in the Fibonacci sequence to return
     Returns:
         int: the `n`-th Fibonacci number
     Example:
@@ -117,10 +115,10 @@ def iterative_fibonacci(n):
 
 
 def recursive_fibonacci(n):
-    """Return the `n`-th Fibonacci number using iteration. There should be no loops.
+    """Return the `n`-th Fibonacci number using recursion. There should be no loops.
 
     Args:
-        n (int): the index in the Fibonacci sequence to retur
+        n (int): the index in the Fibonacci sequence to return
     Returns:
         int: the `n`-th Fibonacci number
     Example:
@@ -166,21 +164,15 @@ def print_args_info(*args, **kwargs):
 
 
 def set_global_string(s):
-    """Set the value of the `global_string` to `s`
+    """Get the value of the `global_string` to `s`
 
-    Args:
-        s (str): string to set `global_string` to
+    Returns:
+        str: the value of `global_string` in the file
 
     Example:
-    >>> from submission import global_string
-    >>> print(global_string)
-    'This is an example of a global string.'
-    >>> print(global_variable_string)
-    With f-string formatting: This is an example of a global string.
-    >>> set_global_string('asdf')
+    >>> from submission import get_global_string
+    >>> get_global_string()
     >>> print(global_string)
     'asdf'
-    >>> print(global_variable_string)
-    With f-string formatting: asdf
     """
     raise NotImplementedError("Delete this once implemented.")
