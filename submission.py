@@ -163,7 +163,7 @@ def print_args_info(*args, **kwargs):
     raise NotImplementedError("Delete this once implemented.")
 
 
-def set_global_string(s):
+def get_global_string(s):
     """Get the value of the `global_string` to `s`
 
     Returns:
@@ -176,3 +176,32 @@ def set_global_string(s):
     'asdf'
     """
     raise NotImplementedError("Delete this once implemented.")
+
+
+if __name__ == '__main__':
+    assert reverse_str('abc') == 'cba'
+
+    assert gc_content('GCATGCATTA') == 0.4
+
+    assert sum_list([1, 2, 3, 4]) == 10
+
+    assert sum_args(1, 2, 3, 4) == 10
+
+    assert avg_list([1, 2, 3, 4]) == 2.5
+
+    assert one_hot_encoding(4) == [0, 0, 0, 0, 1, 0, 0, 0, 0, 0]
+
+    assert iterative_fibonacci(5) == 5
+
+    assert recursive_fibonacci(5) == 5
+
+    assert binary_search([1, 3, 7, 10], 7) == 2
+    assert binary_search([1, 3, 7, 10], 4) == -1
+    assert binary_search([], 5) == -1
+
+    assert (
+        print_args_info(1, 'asdf', [1, 2, 3], first_kwarg=1, second_kwarg=[3]) ==
+        """Args: 1, asdf, [1, 2, 3]. Kwargs: {'first_kwarg': 1, 'second_kwarg': [3]}"""
+    )
+
+    assert get_global_string() == 'This is an example of a global string.'

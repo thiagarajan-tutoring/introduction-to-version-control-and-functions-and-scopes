@@ -82,5 +82,5 @@ def test_print_args_info():
 
 
 def test_get_global_string():
-    from solution import get_global_string
+    from submission import get_global_string
     assert get_global_string() == 'This is an example of a global string.'
